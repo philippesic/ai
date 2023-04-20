@@ -1,4 +1,3 @@
-
 import fastbook
 fastbook.setup_book()
 
@@ -33,7 +32,7 @@ def clean (dir):
     return cleaned_files
 
 search = input("Enter search term: ")
-amount = input("Enter number of images to download: ")
+amount = int(input("Enter number of images to download: "))
 tot_path = os.path.join(root_path, search.replace(" ", "_"))
 os.makedirs(tot_path, exist_ok=True)
 
@@ -50,10 +49,3 @@ print(f"Downloaded {len(cleaned_files)} files.")
            #      item_tfms=Resize(224))
 
 #dataload = fish.dataloaders(root_path + cur_path)
-
-
-
-
-
-
-
